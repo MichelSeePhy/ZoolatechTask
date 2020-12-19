@@ -1,11 +1,15 @@
 package pages;
 
+import com.codeborne.selenide.SelenideElement;
+
 import static com.codeborne.selenide.Selenide.$;
 
 public class AddProductModal {
 
+    private SelenideElement viewCartButton =  $("div.item-buttons>a");
+
     public void viewCartFromModal() {
-        $("div.item-buttons>a").click();
+       viewCartButton.click();
     }
 
 }
